@@ -4,6 +4,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content >
+  <ion-item *ngFor='let recipe of recipes'>
+    <ion-list>
+      <ion-avatar>
+        <ion-img [src]='recipe.imageUrl'></ion-img>
+      </ion-avatar>
+      <ion-label> {{ recipe.title}} </ion-label>
+    </ion-list>
+  </ion-item>
 </ion-content>
