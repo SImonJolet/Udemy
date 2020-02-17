@@ -26,8 +26,6 @@ addBtn.addEventListener('click', () => {
         //Si valeur vide: on arrete le fonctionnement 
        return;
     }
-    console.log("Dépense: ",enteredReason);
-    console.log("Montant: ", enteredAmount);
     const newItem= document.createElement('ion-item');
     newItem.textContent= enteredReason + ': €' + enteredAmount;
 
