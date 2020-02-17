@@ -6,6 +6,15 @@ const addBtn= document.getElementById('btn-add');
 
 const depenseList = document.getElementById('depense-list');
 
+const totalOutput = document.getElementById('total');
+
+let total= 0
+
+const clear = () => {
+    reasonInput.value='';
+    amountInput.value='';
+}
+
 addBtn.addEventListener('click', () => {
    const enteredReason = reasonInput.value;
    const enteredAmount = amountInput.value;
@@ -20,8 +29,16 @@ addBtn.addEventListener('click', () => {
     console.log("Dépense: ",enteredReason);
     console.log("Montant: ", enteredAmount);
     const newItem= document.createElement('ion-item');
-    newItem.textContent= enteredReason + ': $' + enteredAmount;
+    newItem.textContent= enteredReason + ': €' + enteredAmount;
 
     depenseList.appendChild(newItem);
+
+
+    total += +enteredAmount;
+    totalOutput.textContent=total;
+    clear();
 });
+
+cancelBtn.addEventListener('click', clear());
+
 
