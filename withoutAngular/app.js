@@ -4,6 +4,8 @@ const amountInput= document.getElementById('input-amount');
 const cancelBtn= document.getElementById('btn-cancel');
 const addBtn= document.getElementById('btn-add');
 
+const depenseList = document.getElementById('depense-list');
+
 addBtn.addEventListener('click', () => {
    const enteredReason = reasonInput.value;
    const enteredAmount = amountInput.value;
@@ -17,7 +19,9 @@ addBtn.addEventListener('click', () => {
     }
     console.log("Dépense: ",enteredReason);
     console.log("Montant: ", enteredAmount);
-    
-    
+    const newItem= document.createElement('ion-item');
+    newItem.textContent= enteredReason + ': $' + enteredAmount;
+
+    depenseList.appendChild(newItem);
 });
 
