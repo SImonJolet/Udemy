@@ -5,16 +5,11 @@ const routes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
   {
     path: 'recipes',
-    children: [
-      {
-        path: '',
-        loadChildren: () => import('./recipes/recipes.module').then( m => m.RecipesPageModule)
-      },
-      {
-        path: ':recipesId',
-        loadChildren: () => import('./recipe-detail/recipe-detail.module').then( m => m.RecipeDetailPageModule)
-      }
-    ]
+    loadChildren: () => import('./recipes/recipes.module').then( m => m.RecipesPageModule)
+  },
+  {
+    path: 'recipe-detail',
+    loadChildren: () => import('./recipe-detail/recipe-detail.module').then( m => m.RecipeDetailPageModule)
   },
 ];
 

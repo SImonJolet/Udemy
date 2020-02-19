@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {Recipe} from './recipes.model'
-import { RecepiesService } from '../recepies/recepies.service';
-
+import { Recipe } from './recipes.model';
 
 
 @Component({
@@ -12,18 +10,23 @@ import { RecepiesService } from '../recepies/recepies.service';
 })
 export class RecipesPage implements OnInit {
 
-  recipes: Recipe[];
-  
-  constructor(
-    private recepiesService: RecepiesService
-  ) { }
-
-
+  recipes: Recipe[] = [
+    {
+      id:'r1',
+      title: 'Schnitzel', 
+      imageUrl: 'https://www.foodiecrush.com/wp-content/uploads/2018/10/Pork-Schnitzel-foodiecrush.com-016-683x1024.jpg',
+      ingredients: ['veau, chapelure, oeufs, farine, pomme de terre à frite']
+    },
+    {
+      id:'r2',
+      title: 'Spaghetti', 
+      imageUrl: 'https://assets.afcdn.com/recipe/20180326/78158_w1024h768c1cx2736cy1824cxt0cyt0cxb5472cyb3648.jpg',
+      ingredients: ['pate, sauce']
+    }
+  ]
+  constructor() { }
 
   ngOnInit() {
-    console.log("simon");
-    
-    this.recipes = this.recepiesService.getAllRecipes();
   }
 
 }
