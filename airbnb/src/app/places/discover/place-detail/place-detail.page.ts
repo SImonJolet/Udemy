@@ -18,8 +18,9 @@ export class PlaceDetailPage implements OnInit {
   }
   onBookPlace() {
     console.log('simon');
-   //this.router.navigateByUrl('/places/tabs/discover');
-   this.navCtrl.navigateBack('/places/tabs/discover');
+    // this.router.navigateByUrl('/places/tabs/discover');
+    this.navCtrl.navigateBack('/places/tabs/discover');
+    // this.navCtrl.pop();
     
   }
 
