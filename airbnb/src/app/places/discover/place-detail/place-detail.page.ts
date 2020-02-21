@@ -42,6 +42,15 @@ export class PlaceDetailPage implements OnInit {
     })
     .then(modalEl => {
       modalEl.present();
+      return modalEl.onDidDismiss();
+    })
+    .then(resultData => {
+      console.log(resultData.data, resultData.role);
+      if(resultData.role === 'Confirmer'){
+        console.log('CONFIRMER!');
+        
+      }
+      
     })
 
   }
