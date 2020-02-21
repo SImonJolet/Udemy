@@ -1,59 +1,32 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Mes offres</ion-title>
+  <ion-toolbar>
+    <ion-title>My Offers</ion-title>
     <ion-buttons slot="primary">
-      <ion-button slot="icon-only" routerLink="/places/tabs/offers/new">
-        <ion-icon name="add"></ion-icon>
+      <ion-button routerLink="/places/tabs/offers/new">
+        <ion-icon name="add" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-grid>
     <ion-row>
       <ion-col size="12" size-sm="8" offset-sm="2">
-        <ion-card class="ion-text-center">
-          <ion-card-header>
-            <ion-card-title>{{loadedPlaces[0].title}}</ion-card-title>
-            <ion-card-subtitle>{{loadedPlaces[0].price | currency}} /Nuit</ion-card-subtitle>
-          </ion-card-header>
-          <ion-img [src]="loadedPlaces[0].imageUrl"></ion-img>
-          <ion-card-content>
-            {{loadedPlaces[0].description}}
-          </ion-card-content>
-          <div class="">
-            <ion-button 
-              fill="clear" 
-              color="primary" 
-              [routerLink]="['/','places', 'tabs', 'offers',loadedPlaces[0].id]"
-              routerDirection="forward"
-            >
-              More
-            </ion-button>
-          </div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="12" size-sm="8" offset-sm="2">
         <ion-list>
-          <ion-item 
-            *ngFor='let place of loadedPlaces.slice(1)' 
-            [routerLink]="['/', 'places', 'tabs', 'offers', offer.id]" 
-            detail
+          <ion-item
+            *ngFor="let offer of offers"
+            [routerLink]="['/', 'places', 'tabs', 'offers', offer.id]"
           >
             <ion-thumbnail slot="start">
-              <ion-img [src]="place.imageUrl"></ion-img>
+              <ion-img [src]="offer.imageUrl"></ion-img>
             </ion-thumbnail>
             <ion-label>
-              <h2> {{place.title}} </h2>
-              <p> {{place.description}} </p>
+              <h1>{{ offer.title }}</h1>
             </ion-label>
           </ion-item>
         </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>
-
 </ion-content>

@@ -22,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'offer-booking',
-    loadChildren: () => import('./offer-booking/offer-booking.module').then( m => m.OfferBookingPageModule)
+    loadChildren: () => import('./offer-booking/offer-booking.module').then( m => m.OfferBookingpageModule)
   }
 ];
 

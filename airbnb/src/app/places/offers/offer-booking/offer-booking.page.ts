@@ -11,7 +11,7 @@ import { PlacesService } from 'src/app/places.service';
   templateUrl: './offer-booking.page.html',
   styleUrls: ['./offer-booking.page.scss'],
 })
-export class OfferBookingPage implements OnInit {
+export class OfferBookingpage implements OnInit {
   place: Place;
 
 

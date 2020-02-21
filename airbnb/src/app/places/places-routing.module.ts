@@ -42,7 +42,7 @@ const routes: Routes = [
           {
             path: ':placeId',
             loadChildren:
-              './offers/offer-bookings/offer-bookings.module#OfferBookingsPageModule'
+              './offers/offer-booking/offer-booking.module#OfferBookingpageModule'
           }
         ]
       },
