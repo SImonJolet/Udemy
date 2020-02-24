@@ -14,6 +14,7 @@ export class BookingService {
     ];
 
     get bookings() {
+        
         return [...this._bookings];
     }
 }
