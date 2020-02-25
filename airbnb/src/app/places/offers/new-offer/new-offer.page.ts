@@ -35,4 +35,5 @@ export class NewOfferPage implements OnInit {
         validators: [Validators.required]
       })
     })
+  }
 }
