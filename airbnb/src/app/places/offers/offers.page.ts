@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { IonItemSliding } from '@ionic/angular';
 
 import {PlacesService} from '../../places.service';
 import { Place } from '../place.model';
-import { IonItemSliding } from '@ionic/angular';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-offers',
@@ -21,11 +21,10 @@ export class OffersPage implements OnInit {
   ngOnInit() {
     this.offers = this.placeService.places;
   }
+  
   onEdit(offerId:string, slidingItem: IonItemSliding){
     slidingItem.close();
     this.router.navigate(['/','places', 'tabs', 'offers','edit', offerId])
     console.log('Edited item:',offerId);
-    
   }
-
 }
