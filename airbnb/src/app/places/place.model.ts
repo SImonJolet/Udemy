@@ -1,10 +1,14 @@
+import { Data } from '@angular/router';
+
 export class Place {
     constructor(
       public id: string,
       public title: string,
       public description: string,
       public imageUrl: string,
-      public price: number
+      public price: number, 
+      public availableFrom: Date,
+      public availableTo: Date
     ) {}
   }
   
