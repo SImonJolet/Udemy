@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
+
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -17,18 +18,15 @@ export class AuthPage implements OnInit {
     private authService : AuthService,
     private router: Router, 
     private loadingCtrl: LoadingController
-  ) { }
+  ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
   onLogin() {
     this.isLoading = true;
     this.authService.login();
     this.loadingCtrl
-      .create({
-        keyboardClose: true,
-        message: 'Connexion ...'
-      })
+      .create({ keyboardClose: true, message: 'Connexion ...' })
       .then(loadingEl => {
         loadingEl.present();
         setTimeout(() => {
@@ -38,22 +36,24 @@ export class AuthPage implements OnInit {
         },1500 )
       });
   }
+
+  onSwitchAuthMode() {
+    this.isLogin= !this.isLogin;
+  }
+
   onSubmit(form: NgForm){
     if (!form.valid) {
       return;
     }
-      
       const email = form.value.email;
       const password = form.value.password;
       console.log("email: ", email, "password: ",password);
 
       if(this.isLogin){
-        // Send a request to login server
+        // Send a request to login servers
       }else{
-        //Send a request to signup server 
+        //Send a request to signup servers
       }
   }
-  onSwitchAuthMode() {
-    this.isLogin= !this.isLogin;
-  }
+ 
 }
