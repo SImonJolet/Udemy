@@ -56,19 +56,41 @@ Il y a des messages d'erreur en cas de champs non conforme quand on les quitte, 
 
 On a ensuite un bouton pour se connecter, et un bouton pour switcher vers une page inscription (pas utile au niveau du Chapitre11). On remarque aussi que le bouton de switch est dynamqiue en fonction de où on est et que le titre de la page est aussi dynamqiue à ce niveau, alors qu'on reste sur la même page, avec un Url qui ne change pas.
 
-### Découvrir.
+### Découvrir
 
 Il est possible d'accéder à des pages détails pour chaque bien. Et si ils sont disponibles, de les réserver.</br>
 On peut réserver soit avec des dates en aléatoires pré-encodées, soit en nous laissant la possibilité de choisir nos dates de vacances (ce qui est quand même mieux pour une plateforme de location de biens immobiliers).
 
 Une fois ce choix fait, on a une page où entrer nos informations, avec des inputs normaux, des inputs date et un sélecteur.</br>
 Il y a une vérification pour être sûr que tous est rempli, et un check fait sur la date pour être sur qu'on ne puisse pas sélectionner une date de fin de location antérieure à celle de début.
-
+ .
+ gcm ""
 Enfin, on a un bouton, qui n'est accesible que quand tous les champs sont remplis et valables, pour valider sa réservation.
 
 Une fois la validation faite, on peut aller voir dans la page de nos réservations. </br>
 On y voit que cette réservation est mise en cache, et qu'on y a acces.</br>
 On peut du coup la supprimer aussi.
+
+### Offer
+
+Dans l'onglet *Offres*, on a une listes des biens qu'on à mis en location. (au chap 11, c'est pas bien fait, il y a tous les biens, or il ne devraient pas y être, vu qu'on est connecté avec le compte qui n'a pas fait ces bien de base).
+
+Là, il y a plusieurs options. </br>
+
+#### Ajouter un bien
+Soit on veut ajouter un nouveau bien.</br>
+Dans ce cas, il y a un petit bouton dans la toolbar pour ce faire.
+
+On va y demander une série d'informations, en mettant un de nouveau plusieurs types de champs (text, textarea, number, date). </br>
+De nouveau, il faut tous les champs remplis et valables pour pouvoir valider l'entrée de ce nouveau bien.
+
+Une fois que c'est fait, en retournant sur les listings (que ce soit de nos offres, ou la découverte) que le bien est bien rentré dedans.
+On voit aussi que ce n'est pas dans les disponibles, car on ne peut pas louer sa propre maison.
+
+#### Modifier un de nos biens
+Soit on veut modifier un de nos bien. </br>
+Soit on le swipe, soit on clique dessus et dans les deux cas on a un bouton pour éditer.</br>
+On ne peut y modifier que le texte présent et le titre, et on peut voir que les champs sont pré-remplis avec les valeurs qui sont enregistrées.
 
 ### Tech
 
