@@ -3,9 +3,9 @@ import { MenuController } from '@ionic/angular';
 import { SegmentChangeEventDetail } from '@ionic/core';
 import { Subscription } from 'rxjs';
 
+import { PlacesService } from 'src/app/places.service';
 import { Place } from '../place.model';
 import { AuthService } from '../../auth/auth.service';
-import { PlacesService } from 'src/app/places.service';
 
 @Component({
   selector: 'app-discover',
