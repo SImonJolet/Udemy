@@ -30,7 +30,7 @@ export class OfferBookingpage implements OnInit, OnDestroy {
         this.navCtrl.navigateBack('/places/tabs/offers');
         return;
       }else {
-        this.placeSub = this.placeService.getPlaces(paramMap.get('placeId')).subscribe( places => {
+        this.placeSub = this.placeService.getPlace(paramMap.get('placeId')).subscribe( places => {
           this.place = places
         })
       }

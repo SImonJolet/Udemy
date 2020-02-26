@@ -9,7 +9,6 @@ import { AuthService } from './auth/auth.service';
   providedIn: 'root'
 })
 export class PlacesService {
-
   private _places = new BehaviorSubject<Place[]>([
     new Place(
       'p1',
@@ -49,7 +48,7 @@ export class PlacesService {
 
   constructor(private authService: AuthService) {}
 
-  getPlaces(id: string) {
+  getPlace(id: string) {
     return this.places.pipe(
       take(1),
       map(places => {

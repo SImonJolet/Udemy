@@ -42,7 +42,7 @@ export class PlaceDetailPage implements OnInit, OnDestroy {
         return;
       }
       this.placeSub = this.placesService
-        .getPlaces(paramMap.get('placeId'))
+        .getPlace(paramMap.get('placeId'))
         .subscribe(place => {
           this.place = place;
           this.isBookable = place.userId !== this.authService.userId
