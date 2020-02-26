@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { BookingService } from './bookings.service';
-import { Booking } from './bookings.model';
 import { IonItemSliding, LoadingController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
+
+import { BookingService } from './bookings.service';
+import { Booking } from './bookings.model';
 
 @Component({
   selector: 'app-bookings',
@@ -23,8 +24,9 @@ export class BookingsPage implements OnInit, OnDestroy {
       this.loadedBookings = bookings;
     })
   }
-  onCancelBooking(bookingId: string, slidingBooking: IonItemSliding) {  
-    slidingBooking.close();
+
+  onCancelBooking(bookingId: string, slindingEl: IonItemSliding) {  
+    slindingEl.close();
     this.loadingCtrl.create({
       message: 'Suppression'
     }).then(loadingEl => {

@@ -1,8 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      {{selectedPlace.title}}
-    </ion-title>
+    <ion-title>{{selectedPlace.title}}</ion-title>
     <ion-buttons slot="primary">
       <ion-button (click)="onCancel()">
         <ion-icon name="close"></ion-icon>
@@ -49,6 +47,10 @@
               <ion-select-option value="1">1</ion-select-option>
               <ion-select-option value="2">2</ion-select-option>
               <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+              <ion-select-option value="6">6</ion-select-option>
+              <ion-select-option value="7">7</ion-select-option>
             </ion-select>
           </ion-item>
         </ion-col>
@@ -58,8 +60,8 @@
           <ion-item>
             <ion-label position="floating">Du</ion-label>
             <ion-datetime 
-              display-format="MMM DD YYYY" 
-              picker-format= "YY MM DD"
+              display-format="DD MM YYYY" 
+              picker-format= "DD MM YYYY"
               [min]="selectedPlace.availableFrom.toISOString()" 
               [max]="selectedPlace.availableTo.toISOString()"
               [ngModel]="startDate"
@@ -73,8 +75,8 @@
           <ion-item>
             <ion-label position="floating">Au</ion-label>
               <ion-datetime 
-                display-format="MMM DD YYYY" 
-                picker-format= "YY MM DD"
+                display-format="DD MM YYYY" 
+                picker-format= "DD MM YYY"
                 [min]="startDateCtrl.value" 
                 [max]="selectedPlace.availableTo.toISOString()"
                 [ngModel]="endDate"

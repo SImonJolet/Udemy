@@ -12,3 +12,4 @@ export class Booking {
       public bookedTo: Date
     ) {}
   }
+  
