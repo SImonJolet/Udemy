@@ -1,5 +1,3 @@
-import { Data } from '@angular/router';
-
 export class Place {
     constructor(
       public id: string,
