@@ -19,7 +19,7 @@ export class PlacesService {
       156,
       new Date('2019-01-01'),
       new Date ('2019-12-31'),
-      '1'
+      'abc'
     ),
     new Place(
       'p2',
@@ -29,7 +29,7 @@ export class PlacesService {
       130,
       new Date('2019-01-01'),
       new Date ('2019-12-31'),
-      '2'
+      'abc'
     ),
     new Place(
       'p3',
@@ -39,7 +39,7 @@ export class PlacesService {
       99,
       new Date('2019-01-01'),
       new Date ('2019-12-31'),
-      '3'
+      'abc'
     )
   ])
 
